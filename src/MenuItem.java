@@ -1,4 +1,4 @@
-public class MenuItem {
+public class MenuItem implements MenuItemNames{
     private double price;
     private String name;
     private String description;
@@ -12,8 +12,22 @@ public class MenuItem {
      * @param url a url to the image of the MenuItem
      */
     public MenuItem(double price, String name, String description, String url) {
+        if (price < 0) {
+            throw new IllegalArgumentException("The passed in price is less than 0");
+        }
+        if (name == null) {
+            throw new IllegalArgumentException("The passed in name is equal to null");
+        }
+        if (description == null) {
+            throw new IllegalArgumentException("The passed in description is equal to null");
+        }
+        if (url == null) {
+            throw new IllegalArgumentException("The passed in url is equal to null");
+        }
         this.price = price;
-        this.name = name;  // level 2
+        if (nameSet.add(name)) {
+            this.name = name;
+        }
         this.description = description;
         this.url = url;
     }
@@ -63,6 +77,9 @@ public class MenuItem {
      * @param price the value the price is being set to
      */
     public void setPrice(double price) {
+        if (price < 0) {
+            throw new IllegalArgumentException("The passed in price is less than 0");
+        }
         this.price = price;
     }
 
@@ -71,7 +88,12 @@ public class MenuItem {
      * @param name the String the name attribute is being set to
      */
     public void setName(String name) {
-        this.name = name;
+        if (name == null) {
+            throw new IllegalArgumentException("The passed in name is equal to null");
+        }
+        if (nameSet.add(name)) {
+            this.name = name;
+        }
     }
 
     /**
@@ -79,6 +101,9 @@ public class MenuItem {
      * @param description the String the description attribute is being to set
      */
     public void setDescription(String description) {
+        if (description == null) {
+            throw new IllegalArgumentException("The passed in description is equal to null");
+        }
         this.description = description;
     }
 
@@ -87,6 +112,9 @@ public class MenuItem {
      * @param url the String the url attribute is being set to
      */
     public void setUrl(String url) {
+        if (url == null) {
+            throw new IllegalArgumentException("The passed in url is equal to null");
+        }
         this.url = url;
     }
 }

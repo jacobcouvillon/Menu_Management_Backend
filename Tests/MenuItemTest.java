@@ -53,4 +53,18 @@ public class MenuItemTest {
         Assertions.assertEquals("", item.getDescription());
         Assertions.assertEquals("", item.getUrl());
     }
+
+    /*
+    * Level 2 Test
+    * Tests that there cannot be two MenuItem objects with the same name
+     */
+    @Test
+    public void duplicateMenuItemNameTest() {
+        String description = "A medium pizza with a choice of any three toppings";
+        MenuItem item1 = new MenuItem(10.99, "Medium Pizza", description, "www.fakeurl.com");
+        MenuItem item2 = new MenuItem(10.99, "Medium Pizza", description, "www.fakeurl.com");
+        Assertions.assertEquals("Medium Pizza", item1.getName());
+        // Tests that the second MenuItem will not have the same name as the first
+        Assertions.assertNotEquals("Medium Pizza", item2.getName());
+    }
 }

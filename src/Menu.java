@@ -8,6 +8,9 @@ public class Menu {
      * @param menu list of MenuItems that represents the menu
      */
     public Menu(ArrayList<MenuItem> menu) {
+        if (menu == null) {
+            throw new IllegalArgumentException("The passed in menu was equal to null");
+        }
         this.menu = menu;
     }
 
@@ -25,6 +28,9 @@ public class Menu {
      * @return the menuItem added to the list
      */
     public MenuItem addMenuItem(MenuItem menuItem) {
+        if (menuItem == null) {
+            throw new IllegalArgumentException("The passed in Menu Item was equal to null");
+        }
         this.menu.add(menuItem);
         return menuItem;
     }
@@ -92,6 +98,9 @@ public class Menu {
      * @param menu An ArrayList of the MenuItems that the menu attribute will equal
      */
     public void setMenu(ArrayList<MenuItem> menu) {
+        if (menu == null) {
+            throw new IllegalArgumentException("The passed in MenuItem list is equal to null");
+        }
         this.menu = menu;
     }
 }
