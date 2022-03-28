@@ -13,7 +13,7 @@ public class RestaurantTest {
         ArrayList<Menu> menuList = new ArrayList<Menu>();
         ArrayList<MenuItem> menuItemList = new ArrayList<MenuItem>();
         String description = "A small pizza with a choice of any three toppings";
-        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "");
+        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "", Course.ENTREE, "", Type.STANDALONE);
         menuItemList.add(item);  // creating menu item list for menu object
         Menu menu = new Menu(menuItemList);
         Menu menu2 = new Menu(menuItemList);
@@ -30,7 +30,7 @@ public class RestaurantTest {
         ArrayList<Menu> menuList = new ArrayList<Menu>();
         ArrayList<MenuItem> menuItemList = new ArrayList<MenuItem>();
         String description = "A small pizza with a choice of any three toppings";
-        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "");
+        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "", Course.ENTREE, "", Type.STANDALONE);
         menuItemList.add(item);  // creating menu item list for menu object
         Menu menu = new Menu(menuItemList);
         menuList.add(menu);  // creating menu list for restaurant object
@@ -50,7 +50,7 @@ public class RestaurantTest {
         ArrayList<Menu> menuList = new ArrayList<Menu>();
         ArrayList<MenuItem> menuItemList = new ArrayList<MenuItem>();
         String description = "A small pizza with a choice of any three toppings";
-        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "");
+        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "", Course.ENTREE, "", Type.STANDALONE);
         menuItemList.add(item);
         Menu menu = new Menu(menuItemList);
         Restaurant restaurant = new Restaurant();
@@ -64,7 +64,7 @@ public class RestaurantTest {
         ArrayList<Menu> blankMenu = new ArrayList<Menu>();
         ArrayList<MenuItem> menuItemList = new ArrayList<MenuItem>();
         String description = "A small pizza with a choice of any three toppings";
-        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "");
+        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "", Course.ENTREE, "", Type.STANDALONE);
         menuItemList.add(item);
         Menu menu = new Menu(menuItemList);
         Restaurant restaurant = new Restaurant();
@@ -79,7 +79,7 @@ public class RestaurantTest {
         ArrayList<Menu> blankMenu = new ArrayList<Menu>();
         ArrayList<MenuItem> menuItemList = new ArrayList<MenuItem>();
         String description = "A small pizza with a choice of any three toppings";
-        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "");
+        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "", Course.ENTREE, "", Type.STANDALONE);
         menuItemList.add(item);
         Menu menu = new Menu(menuItemList);
         Restaurant restaurant = new Restaurant();
@@ -93,7 +93,7 @@ public class RestaurantTest {
         ArrayList<Menu> menuList = new ArrayList<Menu>();
         ArrayList<MenuItem> menuItemList = new ArrayList<MenuItem>();
         String description = "A small pizza with a choice of any three toppings";
-        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "");
+        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "", Course.ENTREE, "", Type.STANDALONE);
         menuItemList.add(item);
         Menu menu = new Menu(menuItemList);
         menuList.add(menu);
@@ -112,7 +112,7 @@ public class RestaurantTest {
         ArrayList<MenuItem> menuItemList1 = new ArrayList<MenuItem>();
         ArrayList<MenuItem> menuItemList2 = new ArrayList<MenuItem>();
         String description = "A small pizza with a choice of any three toppings";
-        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "");
+        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "", Course.ENTREE, "", Type.STANDALONE);
         menuItemList1.add(item);
         menuItemList2.add(item);
         Menu menu1 = new Menu(menuItemList1);  // a menu with the item MenuItem

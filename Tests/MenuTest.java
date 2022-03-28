@@ -8,7 +8,7 @@ public class MenuTest {
     public void createMenuTest() {
         ArrayList menuList = new ArrayList();
         String description = "A small pizza with a choice of any three toppings";
-        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "");
+        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "", Course.ENTREE, "", Type.STANDALONE);
         menuList.add(item);
         Menu menu = new Menu(menuList);
         Assertions.assertEquals(item, menu.getMenu().get(0));
@@ -26,7 +26,7 @@ public class MenuTest {
     public void addMenuItemTest() {
         Menu menu = new Menu();
         String description = "A small pizza with a choice of any three toppings";
-        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "");
+        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "", Course.ENTREE, "", Type.STANDALONE);
         menu.addMenuItem(item);
         Assertions.assertEquals(item, menu.getMenu().get(0));
     }
@@ -35,7 +35,7 @@ public class MenuTest {
     public void removeMenuItemTest() {
         ArrayList<MenuItem> menuList = new ArrayList<MenuItem>();
         String description = "A small pizza with a choice of any three toppings";
-        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "");
+        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "", Course.ENTREE, "", Type.STANDALONE);
         menuList.add(item);
         Menu menu = new Menu(menuList);
         menu.removeMenuItem(item);
@@ -47,7 +47,7 @@ public class MenuTest {
     public void removeMenuItemIndexTest() {
         ArrayList<MenuItem> menuList = new ArrayList<MenuItem>();
         String description = "A small pizza with a choice of any three toppings";
-        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "");
+        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "", Course.ENTREE, "", Type.STANDALONE);
         menuList.add(item);
         Menu menu = new Menu(menuList);
         menu.removeMenuItem(0);
@@ -59,7 +59,7 @@ public class MenuTest {
     public void clearMenuTest() {
         ArrayList<MenuItem> menuList = new ArrayList<MenuItem>();
         String description = "A small pizza with a choice of any three toppings";
-        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "");
+        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "", Course.ENTREE, "", Type.STANDALONE);
         menuList.add(item);
         Menu menu = new Menu(menuList);
         menu.clearMenu();
@@ -71,7 +71,7 @@ public class MenuTest {
     public void getMenuItemTest() {
         ArrayList<MenuItem> menuList = new ArrayList<MenuItem>();
         String description = "A small pizza with a choice of any three toppings";
-        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "");
+        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "", Course.ENTREE, "", Type.STANDALONE);
         menuList.add(item);
         Menu menu = new Menu(menuList);
         Assertions.assertEquals(item, menu.getMenuItem(0));
@@ -81,7 +81,7 @@ public class MenuTest {
     public void containsMenuItemTest() {
         ArrayList<MenuItem> menuList = new ArrayList<MenuItem>();
         String description = "A small pizza with a choice of any three toppings";
-        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "");
+        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "", Course.ENTREE, "", Type.STANDALONE);
         menuList.add(item);
         Menu menu = new Menu(menuList);
         Assertions.assertEquals(true, menu.containsMenuItem(item));
@@ -92,7 +92,7 @@ public class MenuTest {
         Menu menu = new Menu();
         ArrayList<MenuItem> menuList = new ArrayList<MenuItem>();
         String description = "A small pizza with a choice of any three toppings";
-        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "");
+        MenuItem item = new MenuItem(10.99, "Small Pizza", description, "", Course.ENTREE, "", Type.STANDALONE);
         menuList.add(item);
         menu.setMenu(menuList);
         Assertions.assertEquals(menuList, menu.getMenu());
